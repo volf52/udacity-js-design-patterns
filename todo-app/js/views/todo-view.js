@@ -68,12 +68,6 @@ var app = app || {};
         // Toggle the `"completed"` state of the model.
         toggleCompleted: function() {
             this.model.toggle();
-            if (this.model.get("completed"))
-                this.model.save({ title: `${this.model.get("title")}--done` });
-            else
-                this.model.save({
-                    title: this.model.get("title").split("-")[0]
-                });
         },
 
         // Switch this view into `"editing"` mode, displaying the input field.
