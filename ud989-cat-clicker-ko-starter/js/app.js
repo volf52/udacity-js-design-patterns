@@ -51,6 +51,10 @@ const ViewModel = function() {
     this.incrementCounter = function() {
         self.currCat().clickCount(self.currCat().clickCount() + 1);
     };
+
+    this.setCurrCat = function(newCat) {
+        self.currCat(newCat);
+    };
 };
 
 ko.applyBindings(new ViewModel());
